@@ -1,0 +1,29 @@
+
+ApplicationWindow{
+  id: "applicationwindow0",
+  width: 500,
+  height: 550,
+  x: 0,
+  y: 0,
+  title: "Calculator",
+  center: true,
+  minWidth: 340,
+  minHeight: 530,
+  webPreferences: {
+    devTools: true
+  },
+  child: [
+    Object{
+      id: "appapplicationwindow01",
+      width: 100,
+      height: 100,
+      x: 0,
+      y: 0,
+      name: "App",
+      right: 0,
+      left: 0,
+      top: 0,
+      bottom: 0
+    }
+  ]
+},

@@ -1,0 +1,137 @@
+{
+ "type": "folder",
+ "pjType": "pc - software",
+ "name": "Calculator",
+ "iconA": "folderA",
+ "version": "0.0.1",
+ "description": "",
+ "author": "Artefact-Team",
+ "child": [
+  {
+   "type": "folder",
+   "name": "At",
+   "iconA": "folderB",
+   "col": "#F9B31E",
+   "child": [
+    {
+     "type": "folder",
+     "name": "Sections",
+     "iconA": "folderC",
+     "col": "pink",
+     "child": [
+      {
+       "type": "file",
+       "name": "Panel.at",
+       "iconA": "at"
+      },
+      {
+       "type": "file",
+       "name": "TopBar.at",
+       "iconA": "at"
+      }
+     ]
+    },
+    {
+     "type": "folder",
+     "name": "Utils",
+     "iconA": "folderC",
+     "col": "pink"
+    },
+    {
+     "type": "file",
+     "name": "App.at",
+     "iconA": "at"
+    },
+    {
+     "type": "file",
+     "name": "main.at",
+     "iconA": "at"
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Js",
+   "iconA": "folderB",
+   "child": [
+    {
+     "type": "file",
+     "name": "main.js",
+     "iconA": "js"
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Resources",
+   "iconA": "folderC",
+   "col": "pink",
+   "child": []
+  },
+  {
+   "type": "folder",
+   "name": "Structure",
+   "iconA": "folderD",
+   "col": "green",
+   "deco": "pjStruc",
+   "child": [
+    {
+     "type": "file",
+     "name": "Adder.aat",
+     "child": []
+    },
+    {
+     "type": "file",
+     "name": "Packager.apm",
+     "child": []
+    },
+    {
+     "type": "file",
+     "name": "Router.art",
+     "child": []
+    },
+    {
+     "type": "file",
+     "name": "Store.as",
+     "child": []
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Style",
+   "iconA": "folderB",
+   "child": [
+    {
+     "type": "file",
+     "name": "main.css",
+     "iconA": "css"
+    }
+   ]
+  }
+ ],
+ "setting": [
+  {
+   "name": "Calculator"
+  }
+ ],
+ "appId": "com.artefact.calculator",
+ "designState": {
+  "TopBar_at": {
+   "height": 50,
+   "width": 500,
+   "dark": false
+  },
+  "App_at": {
+   "height": 431,
+   "width": 332,
+   "dark": false
+  },
+  "main_at": {
+   "height": 431,
+   "width": 500,
+   "dark": false
+  }
+ },
+ "icon": "file:///G:/projets/At/awesome-artefact/Calculator/logo.png"
+}

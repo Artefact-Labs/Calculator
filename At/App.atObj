@@ -1,0 +1,56 @@
+Data previousOperend = '0'
+Data currentOperend = '0'
+	
+Data topW = (100/6) + "%"
+Data simpleW = "25%"
+Data simpleH = (100/7) + "%"
+	
+Method appendNumber (number) { 
+	this.currentOperend += number
+}
+	
+Data topBts = [
+	{'val':'MC', 'action':(()=>{})},
+	{'val':'MR', 'action':(()=>{})},
+	{'val':'M+', 'action':(()=>{})},
+	{'val':'M-', 'action':(()=>{})},
+	{'val':'MS', 'action':(()=>{})},
+	{'val':'M*', 'action':(()=>{})},
+]
+	
+Data mainBts = [
+	{'val':'%', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'CE', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'C', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'<x', 'color': '#eeeef7', 'color': '#eeeef7', 'action':(()=>{})},
+	
+	{'val':'1/x', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'x^2', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'sqrt(x)', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'/', 'color': '#eeeef7', 'action':(()=>{})},
+	
+	{'val':'7', 'color': '#fff', 'action':(()=>{})},
+	{'val':'8', 'color': '#fff', 'action':(()=>{})},
+	{'val':'9', 'color': '#fff', 'action':(()=>{})},
+	{'val':'x', 'color': '#eeeef7', 'action':(()=>{})},
+	
+	{'val':'4', 'color': '#fff', 'action':(()=>{})},
+	{'val':'5', 'color': '#fff', 'action':(()=>{})},
+	{'val':'6', 'color': '#fff', 'action':(()=>{})},
+	{'val':'-', 'color': '#eeeef7', 'action':(()=>{})},
+	
+	{'val':'1', 'color': '#fff', 'action':(()=>{})},
+	{'val':'2', 'color': '#fff', 'action':(()=>{})},
+	{'val':'3', 'color': '#fff', 'action':(()=>{})},
+	{'val':'+', 'color': '#eeeef7', 'action':(()=>{})},
+	
+	{'val':'1', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'2', 'color': '#fff', 'action':(()=>{})},
+	{'val':'3', 'color': '#fff', 'action':(()=>{})},
+	{'val':'+', 'color': '#eeeef7', 'action':(()=>{})},
+	
+	{'val':'+/-', 'color': '#fff', 'action':(()=>{})},
+	{'val':'0', 'color': '#fff', 'action':(()=>{})},
+	{'val':',', 'color': '#fff', 'action':(()=>{})},
+	{'val':'=', 'color': '#90aaff', 'action':(()=>{})},	
+]
