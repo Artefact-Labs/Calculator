@@ -106,8 +106,8 @@ First of all you need to have some infrastructure already installed on your mach
 ## Roadmap
 - [x] Top bar
 - [x] Main keyboard
-- [] Panel
-- [] functions
+- [ ] Panel
+- [ ] functions
 
 
 <!-- CONTRIBUTING -->
