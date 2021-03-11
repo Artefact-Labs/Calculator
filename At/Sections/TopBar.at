@@ -27,7 +27,9 @@ Row{
           y: 0,
           flat: true,
           onlyIcon: true,
-          icon: "ion-ios-menu"
+          icon: "ion-ios-menu",
+          radius: 0,
+          onClicked: "<#showPanel#>"
         },
         Text{
           id: "textrowrow013",
@@ -50,7 +52,8 @@ Row{
           flat: true,
           onlyIcon: true,
           icon: "ion-md-open",
-          fontSize: 20
+          fontSize: 20,
+          radius: 0
         }
       ]
     },
@@ -62,7 +65,9 @@ Row{
       flat: true,
       onlyIcon: true,
       icon: "ion-md-time",
-      verticalCenter: 0
+      verticalCenter: 0,
+      radius: 0,
+      onClicked: "<#togelHM#>"
     }
   ]
 },

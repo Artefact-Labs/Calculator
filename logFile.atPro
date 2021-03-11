@@ -15,10 +15,38 @@
    "child": [
     {
      "type": "folder",
+     "name": "Calculators",
+     "iconA": "folderC",
+     "col": "pink",
+     "child": [
+      {
+       "type": "file",
+       "name": "Standard.at",
+       "iconA": "at"
+      }
+     ]
+    },
+    {
+     "type": "folder",
      "name": "Sections",
      "iconA": "folderC",
      "col": "pink",
      "child": [
+      {
+       "type": "file",
+       "name": "History.at",
+       "iconA": "at"
+      },
+      {
+       "type": "file",
+       "name": "HistoryMemory.at",
+       "iconA": "at"
+      },
+      {
+       "type": "file",
+       "name": "Memory.at",
+       "iconA": "at"
+      },
       {
        "type": "file",
        "name": "Panel.at",
@@ -35,7 +63,14 @@
      "type": "folder",
      "name": "Utils",
      "iconA": "folderC",
-     "col": "pink"
+     "col": "pink",
+     "child": [
+      {
+       "type": "file",
+       "name": "HistoryItem.at",
+       "iconA": "at"
+      }
+     ]
     },
     {
      "type": "file",
@@ -124,11 +159,31 @@
   },
   "App_at": {
    "height": 431,
-   "width": 443,
+   "width": 780,
    "dark": false
   },
   "main_at": {
    "height": 431,
+   "width": 500,
+   "dark": false
+  },
+  "Standard_at": {
+   "height": 431,
+   "width": 500,
+   "dark": false
+  },
+  "HistoryMemory_at": {
+   "height": 431,
+   "width": 500,
+   "dark": false
+  },
+  "History_at": {
+   "height": 431,
+   "width": 500,
+   "dark": false
+  },
+  "HistoryItem_at": {
+   "height": 80,
    "width": 500,
    "dark": false
   }

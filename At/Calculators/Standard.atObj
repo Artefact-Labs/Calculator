@@ -1,0 +1,112 @@
+Data topW = (100/6) + "%"
+Data simpleW = "25%"
+Data simpleH = (100/6) + "%"
+	
+Data previousOperand = ''
+Data currentOperand = ''
+Data operation = undefined
+	
+Method clear(){
+	this.currentOperand = ''
+	this.previousOperand = ''
+	this.operation = undefined
+}
+	
+Method delete () { 
+    this.currentOperand = this.currentOperand.toString().slice(0, -1)
+}
+
+Method togleSign(){
+	if(this.currentOperand.includes('-')){
+		this.currentOperand.replace('-', '')
+	} else {
+		this.currentOperand = '-' + this.currentOperand
+	}
+}
+Method appendNumber (number) {
+    if (number === '.' && this.currentOperand.includes('.')) return
+    this.currentOperand = this.currentOperand.toString() + number.toString()
+}
+	
+Method chooseOperation(operation){
+	if(this.currentOperand === '') return
+	if(this.previousOperand !== '') {
+		this.compute()
+	}	
+  this.operation = operation
+  this.previousOperand = this.currentOperand
+  this.currentOperand = ''
+}
+	
+  Method compute() {
+    let computation
+    const prev = parseFloat(this.previousOperand)
+    const current = parseFloat(this.currentOperand)
+    if (isNaN(prev) || isNaN(current)) return
+    switch (this.operation) {
+      case '+':
+        computation = prev + current
+        break
+      case '-':
+        computation = prev - current
+        break
+      case '*':
+        computation = prev * current
+        break
+      case '÷':
+        computation = prev / current
+        break
+      case '%':
+        computation = prev % current
+        break
+      default:
+        return
+    }
+		this.$emit('addOP', {op: this.previousOperand + this.operation + this.currentOperand, 
+																value: computation})
+    this.currentOperand = computation
+    this.operation = undefined
+    this.previousOperand = ''
+  }
+	
+	
+Data topBts = [
+	{'val':'MC', 'action':(()=>{})},
+	{'val':'MR', 'action':(()=>{})},
+	{'val':'M+', 'action':(()=>{})},
+	{'val':'M-', 'action':(()=>{})},
+	{'val':'MS', 'action':(()=>{})},
+	{'val':'M*', 'action':(()=>{})},
+]
+	
+Data mainBts = [
+	{'val':'%', 'color': '#eeeef7', 'action':this.chooseOperation},
+	{'val':'CE', 'color': '#eeeef7', 'action':this.clear},
+	{'val':'C', 'color': '#eeeef7', 'action':this.clear},
+	{'val':'<x', 'color': '#eeeef7', 'color': '#eeeef7', 'action':this.delete},
+	
+	{'val':'1/x', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'x^2', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'sqrt(x)', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'÷', 'color': '#eeeef7', 'action':this.chooseOperation},
+	
+	{'val':'7', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'8', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'9', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'*', 'color': '#eeeef7', 'action':this.chooseOperation},
+	
+	{'val':'4', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'5', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'6', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'-', 'color': '#eeeef7', 'action':this.chooseOperation},
+	
+	{'val':'1', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'2', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'3', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'+', 'color': '#eeeef7', 'action':this.chooseOperation},
+	
+	{'val':'+/-', 'color': '#fff', 'action':this.togleSign},
+	{'val':'0', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'.', 'color': '#fff', 'action':this.appendNumber},
+	{'val':'=', 'color': '#90aaff', 'action':this.compute},	
+]

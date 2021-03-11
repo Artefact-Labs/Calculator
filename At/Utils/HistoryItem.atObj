@@ -1,0 +1,8 @@
+Property operation = "0 + 0"
+Property value = "0"
+	
+Data show = false
+	
+Mounted { 
+	setTimeout(()=>{this.show = true},512)
+}

@@ -1,0 +1,43 @@
+
+TabNavigation{
+  id: "tabnavigation0",
+  width: 100,
+  height: 100,
+  x: 0,
+  y: 0,
+  right: 0,
+  left: 0,
+  top: 0,
+  bottom: 0,
+  color: "transparent",
+  sliderColor: "#bec2ff",
+  tabsTitle: [
+    "History",
+    "Memory"
+  ],
+  model: "<#tabModel#>",
+  child: [
+    Object{
+      id: "history",
+      width: 100,
+      height: 100,
+      name: "History",
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0
+    },
+    Object{
+      id: "memorytabnavigation03",
+      width: 100,
+      height: 100,
+      x: 0,
+      y: 0,
+      name: "Memory",
+      right: 0,
+      left: 0,
+      top: 0,
+      bottom: 0
+    }
+  ]
+},

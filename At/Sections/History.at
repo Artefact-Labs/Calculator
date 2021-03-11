@@ -1,0 +1,43 @@
+
+ScrollArea{
+  id: "scrollarea0",
+  width: 100,
+  height: 100,
+  x: 0,
+  y: 0,
+  right: 0,
+  left: 0,
+  top: 0,
+  bottom: 0,
+  barWidth: 5,
+  styleMode: 4,
+  barColor: "#acadff",
+  child: [
+    Column{
+      id: "columnscrollarea01",
+      width: 100,
+      height: "auto",
+      y: 0,
+      left: 0,
+      right: 0,
+      gap: 4,
+      child: [
+        Object{
+          id: "historyitemtransitioncolumnscrollarea01111",
+          width: 100,
+          height: 80,
+          name: "HistoryItem",
+          right: 4,
+          left: 4,
+          bind_operation: "<#item.op#>",
+          bind_value: "<#item.value#>",
+          modelFor: "<#listOP#>",
+          y: 0
+        }
+      ],
+      reverse: true
+    }
+  ],
+  overflowX: "hidden",
+  overflowY: "scroll"
+},

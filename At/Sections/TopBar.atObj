@@ -1,1 +1,3 @@
-Data currentMode = "Scientifique"
+Property currentMode = "Scientifique"
+Property Function togelHM = (()=>{})
+Property Function showPanel = (()=>{})

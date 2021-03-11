@@ -1,0 +1,70 @@
+
+Transition{
+  id: "transition0",
+  x: 0,
+  y: 0,
+  child: [
+    Item{
+      id: "item0",
+      width: 100,
+      height: 100,
+      x: 0,
+      y: 0,
+      right: 4,
+      left: 4,
+      top: 4,
+      bottom: 4,
+      child: [
+        Text{
+          id: "textitem01",
+          width: 100,
+          height: "50%",
+          y: 0,
+          left: 0,
+          right: 0,
+          value: "<#operation#>",
+          horizontalAlign: "right",
+          verticalAlign: "center",
+          color: "#a5a5a5",
+          fontSize: 15,
+          whiteSpace: "nowrap",
+          textO: true,
+          textOverflow: "ellipsis"
+        },
+        Text{
+          id: "textitem012",
+          width: 100,
+          height: "50%",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          fontSize: 32,
+          value: "<#value#>",
+          horizontalAlign: "right",
+          verticalAlign: "center",
+          whiteSpace: "nowrap",
+          textO: true,
+          textOverflow: "ellipsis"
+        },
+        MouseArea{
+          id: "mouseareaitem05",
+          width: 100,
+          height: 100,
+          x: 0,
+          y: 0,
+          right: 0,
+          left: 0,
+          top: 0,
+          bottom: 0,
+          cursor: "pointer"
+        }
+      ],
+      modelShow: "<#show#>"
+    }
+  ],
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  enterActiveClass: "animated slideInRight"
+},

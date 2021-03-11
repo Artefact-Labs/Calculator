@@ -1,0 +1,5 @@
+Data listOP = []
+	
+Method addOP (op) { 
+	this.listOP.push(op)
+}
