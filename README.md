@@ -142,4 +142,4 @@ Official Website: [https://artefact-labs.com](https://artefact-labs.com)
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Vue.js](https://vuejs.org/)
-* [Phaser.js](https://phaser.io/)
+* [Vuetify](https://vuetifyjs.com/en/)
