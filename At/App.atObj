@@ -1,14 +1,15 @@
 Data currentMode = "standard"
 Data historyMemVisible = true
-	
+Data historyPanelVisible = false
+		
 Method togelHM () { 
 	this.historyMemVisible = !this.historyMemVisible
+	this.historyPanelVisible = !this.historyPanelVisible
 }
 
+Method closeHPanel () { 
+	this.historyPanelVisible = false;
+}
 Computed rMarge () { 
 	return (this.historyMemVisible? 300 : 0)
-}
-
-Method addOP (op) { 
-	this.$refs.historymemory.$refs.history.addOP(op)
 }

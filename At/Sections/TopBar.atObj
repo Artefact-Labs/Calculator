@@ -1,3 +1,9 @@
 Property currentMode = "Scientifique"
 Property Function togelHM = (()=>{})
 Property Function showPanel = (()=>{})
+	
+	
+Method maximize () { 
+		const {remote} = require('electron')
+		remote.getCurrentWindow().maximize()
+}

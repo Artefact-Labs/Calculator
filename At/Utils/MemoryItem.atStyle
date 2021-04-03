@@ -1,0 +1,5 @@
+.transition0{
+	&:hover{
+		background-color: #efefef !important;
+	}
+}

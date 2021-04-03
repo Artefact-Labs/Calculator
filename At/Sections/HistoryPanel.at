@@ -1,0 +1,50 @@
+
+Item{
+  id: "item0",
+  width: 100,
+  height: 100,
+  x: 0,
+  y: 0,
+  right: 0,
+  left: 0,
+  top: 0,
+  bottom: 0,
+  child: [
+    Rectangle{
+      id: "rectangleitem01",
+      width: 100,
+      height: 100,
+      x: 0,
+      y: 0,
+      right: 0,
+      left: 0,
+      top: 0,
+      bottom: 0,
+      color: "#000",
+      opacity: 0.5,
+      child: [
+        MouseArea{
+          id: "mousearearectangleitem011",
+          width: 100,
+          height: 100,
+          x: 0,
+          y: 0,
+          onClicked: "<#close#>",
+          right: 0,
+          left: 0,
+          top: 0,
+          bottom: 0,
+          cursor: "pointer"
+        }
+      ]
+    },
+    Object{
+      id: "history",
+      name: "History",
+      left: 0,
+      right: 0,
+      top: 100,
+      bottom: 0
+    }
+  ]
+},

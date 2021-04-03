@@ -1,5 +1,1 @@
-Data count = 1
-
-Method increment () {
-   this.count++
-}
+Data memoryStack = this.$store.state.memoryStack

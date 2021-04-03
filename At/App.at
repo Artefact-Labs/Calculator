@@ -22,7 +22,6 @@ Item{
       child: [
         Object{
           id: "topBar",
-          width: 100,
           height: 48,
           y: 0.25,
           name: "TopBar",
@@ -32,22 +31,12 @@ Item{
           onTogelHM: "<#togelHM#>"
         },
         Object{
-          id: "standardrectangle03",
-          width: 100,
-          height: 100,
-          x: 0,
-          y: 0,
+          id: "standard",
           name: "Standard",
           right: 0,
           left: 0,
           top: 48,
-          bottom: 0,
-          signal: [
-            Signal{
-              name: "addOP",
-              action: "<#addOP#>"
-            }
-          ]
+          bottom: 0
         }
       ]
     },
@@ -63,6 +52,23 @@ Item{
         default: false,
         sm: true
       }
+    },
+    Object{
+      id: "historypanelitem05",
+      width: 100,
+      height: 100,
+      x: 0,
+      y: 0,
+      name: "HistoryPanel",
+      right: 0,
+      left: 0,
+      top: 0,
+      bottom: 0,
+      modelIf: {
+        default: "<#historyPanelVisible#>",
+        sm: false
+      },
+      onClose: "<#closeHPanel#>"
     }
   ],
   left: 0,

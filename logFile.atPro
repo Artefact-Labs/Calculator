@@ -44,6 +44,11 @@
       },
       {
        "type": "file",
+       "name": "HistoryPanel.at",
+       "iconA": "at"
+      },
+      {
+       "type": "file",
        "name": "Memory.at",
        "iconA": "at"
       },
@@ -68,6 +73,11 @@
       {
        "type": "file",
        "name": "HistoryItem.at",
+       "iconA": "at"
+      },
+      {
+       "type": "file",
+       "name": "MemoryItem.at",
        "iconA": "at"
       }
      ]
@@ -184,6 +194,16 @@
   },
   "HistoryItem_at": {
    "height": 80,
+   "width": 500,
+   "dark": false
+  },
+  "MemoryItem_at": {
+   "height": 431,
+   "width": 500,
+   "dark": false
+  },
+  "HistoryPanel_at": {
+   "height": 431,
    "width": 500,
    "dark": false
   }

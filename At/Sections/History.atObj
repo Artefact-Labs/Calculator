@@ -1,5 +1,1 @@
-Data listOP = []
-	
-Method addOP (op) { 
-	this.listOP.push(op)
-}
+Data listOP = this.$store.state.listOP

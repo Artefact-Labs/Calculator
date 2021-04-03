@@ -1,4 +1,4 @@
-Data topW = (100/6) + "%"
+Data topW = (100/5) + "%"
 Data simpleW = "25%"
 Data simpleH = (100/6) + "%"
 	
@@ -25,7 +25,7 @@ Method togleSign(){
 }
 Method appendNumber (number) {
     if (number === '.' && this.currentOperand.includes('.')) return
-    this.currentOperand = this.currentOperand.toString() + number.toString()
+    this.currentOperand += number
 }
 	
 Method chooseOperation(operation){
@@ -62,32 +62,73 @@ Method chooseOperation(operation){
       default:
         return
     }
-		this.$emit('addOP', {op: this.previousOperand + this.operation + this.currentOperand, 
+		this.$store.commit('addOp', {op: this.previousOperand + this.operation + this.currentOperand, 
 																value: computation})
     this.currentOperand = computation
     this.operation = undefined
     this.previousOperand = ''
   }
 	
+Method clearCurrentInput () { 
+	this.currentOperand = ''
+}
+	
+Method calculateFraction () { 
+	this.currentOperand = 1/parseFloat(this.currentOperand)
+	if(this.previousOperand !== ''){
+		this.compute()
+	}
+}
+	
+Method calculateCarrer () { 
+	this.currentOperand = Math.pow(parseFloat(this.currentOperand), 2)
+	if(this.previousOperand !== ''){
+		this.compute()
+	}
+}
+	
+Method calculateSqrt () { 
+	this.currentOperand = Math.sqrt(parseFloat(this.currentOperand))
+	if(this.previousOperand !== ''){
+		this.compute()
+	}
+}
+	
+Data memoryStack = this.$store.memoryStack
+	
+Method addToMemory () { 
+	this.$store.commit('addToMemory', this.currentOperand)
+}
+Method removeFromMemory () { 
+	this.$store.commit('removeFromMemory')
+}
+Method clearMemory () { 
+	this.$store.commit('clearMemory')
+}
+Method memoryAdd () { 
+	this.$store.commit('memoryAdd', this.currentOperand)
+}
+Method memoryRemove () { 
+	this.$store.commit('memoryRemove', this.currentOperand)
+}
 	
 Data topBts = [
-	{'val':'MC', 'action':(()=>{})},
-	{'val':'MR', 'action':(()=>{})},
-	{'val':'M+', 'action':(()=>{})},
-	{'val':'M-', 'action':(()=>{})},
-	{'val':'MS', 'action':(()=>{})},
-	{'val':'M*', 'action':(()=>{})},
+	{'val':'MC', 'action':this.clearMemory},
+	{'val':'MR', 'action':this.removeFromMemory},
+	{'val':'M+', 'action':this.memoryAdd},
+	{'val':'M-', 'action':this.memoryRemove},
+	{'val':'MS', 'action':this.addToMemory}
 ]
 	
 Data mainBts = [
 	{'val':'%', 'color': '#eeeef7', 'action':this.chooseOperation},
-	{'val':'CE', 'color': '#eeeef7', 'action':this.clear},
+	{'val':'CE', 'color': '#eeeef7', 'action':this.clearCurrentInput},
 	{'val':'C', 'color': '#eeeef7', 'action':this.clear},
 	{'val':'<x', 'color': '#eeeef7', 'color': '#eeeef7', 'action':this.delete},
 	
-	{'val':'1/x', 'color': '#eeeef7', 'action':(()=>{})},
-	{'val':'x^2', 'color': '#eeeef7', 'action':(()=>{})},
-	{'val':'sqrt(x)', 'color': '#eeeef7', 'action':(()=>{})},
+	{'val':'1/x', 'color': '#eeeef7', 'action':this.calculateFraction},
+	{'val':'x^2', 'color': '#eeeef7', 'action':this.calculateCarrer},
+	{'val':'sqrt(x)', 'color': '#eeeef7', 'action':this.calculateSqrt},
 	{'val':'÷', 'color': '#eeeef7', 'action':this.chooseOperation},
 	
 	{'val':'7', 'color': '#fff', 'action':this.appendNumber},

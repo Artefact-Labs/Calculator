@@ -53,7 +53,12 @@ Row{
           onlyIcon: true,
           icon: "ion-md-open",
           fontSize: 20,
-          radius: 0
+          radius: 0,
+          onClicked: "<#maximize#>",
+          visible: {
+						defaultSys: false,
+            windows: true
+          }
         }
       ]
     },
